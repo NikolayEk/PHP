@@ -52,19 +52,19 @@ $summ_sale;
 $summ=$price1*$unit1+$price2*$unit2+$price3*$unit3+$price4*$unit4+$price5*$unit5;
 
 if ($summ>100 && $summ<=105) {$summ_sale=100;}
-elseif ($summ>105 && $summ<=150) {$summ_sale=($price1*$unit1+$price2*$unit2+$price3*$unit3+$price4*$unit4+$price5*$unit5)*0.95;}
+elseif ($summ>105 && $summ<=150) {$summ_sale=$summ*0.95;}
 elseif ($summ>150 && $summ<=160.5) {$summ_sale=150;}
-elseif ($summ>160.5 && $summ<=200) {$summ_sale=($price1*$unit1+$price2*$unit2+$price3*$unit3+$price4*$unit4+$price5*$unit5)*0.93;}
+elseif ($summ>160.5 && $summ<=200) {$summ_sale=$summ*0.93;}
 elseif ($summ>200 && $summ<=220) {$summ_sale=200;}
-elseif ($summ>220) {$summ_sale=($price1*$unit1+$price2*$unit2+$price3*$unit3+$price4*$unit4+$price5*$unit5)*0.9;}
+elseif ($summ>220) {$summ_sale=$summ*0.9;}
 else {$summ_sale=$summ;}
 
 if ($summ>100 && $summ<=105) {$sale=$summ-100;}
-elseif ($summ>105 && $summ<=150) {$sale=($price1*$unit1+$price2*$unit2+$price3*$unit3+$price4*$unit4+$price5*$unit5)*0.05;}
+elseif ($summ>105 && $summ<=150) {$sale=$summ*0.05;}
 elseif ($summ>150 && $summ<=160.5) {$sale=$summ-150;}
-elseif ($summ>160.5 && $summ<=200) {$sale=($price1*$unit1+$price2*$unit2+$price3*$unit3+$price4*$unit4+$price5*$unit5)*0.07;}
+elseif ($summ>160.5 && $summ<=200) {$sale=$summ*0.07;}
 elseif ($summ>200 && $summ<=220) {$sale=$summ-200;}
-elseif ($summ>220) {$sale=($price1*$unit1+$price2*$unit2+$price3*$unit3+$price4*$unit4+$price5*$unit5)*0.1;}
+elseif ($summ>220) {$sale=$summ*0.1;}
 else {$sale=0;}
 
 ?>
@@ -77,7 +77,7 @@ else {$sale=0;}
 <body>
 	<h1>Заказано</h1>
 <!--Блюдо-->
-	<div style="background: #F0F362; float: left; width: 200px;">
+	<div style="background: #F0F362; float: left; width: 220px; padding: 20px;">
 		<p><b>Блюдо</b></p>
 		<p><?=$dish1?></p>
 		<p><?=$dish2?></p>
@@ -86,7 +86,7 @@ else {$sale=0;}
 		<p><?=$dish5?></p>
 	</div>
 <!--количество-->
-	<div style="background: #33bdc4; float: left; width: 200px;">
+	<div style="background: #33bdc4; float: left; width: 220px; padding: 20px;">
 		<p><b>Количество</b></p>
 		<p><?=$unit1?></p>
 		<p><?=$unit2?></p>
@@ -95,7 +95,7 @@ else {$sale=0;}
 		<p><?=$unit5?></p>
 	</div>
 <!--цена-->
-	<div style="background: #8DF362; display: inline-block; width: 200px;">
+	<div style="background: #8DF362; display: inline-block; width: 220px; padding: 20px;">
 		<p><b>Цена</b></p>
 		<p><?=$price1?></p>
 		<p><?=$price2?></p>
@@ -109,5 +109,6 @@ else {$sale=0;}
 		<p>ВАША СКИДКА <?=$sale?>руб. </p>
 		<p>СУММА С УЧЕТОМ СКИДКИ <?=$summ_sale?>руб. </p>
 	</div>
+	<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться к заказу блюд</a>
 </body>
 </html>
