@@ -48,7 +48,7 @@ if ($foodtime=='') {unset($foodtime);}}
 							$myrow=mysqli_query($db, "SELECT * FROM foodtime");
 							$result=mysqli_fetch_array($myrow);
 							do {
-								printf ("<option value=\"%s\">%s</option>", $result['id'], $result['time']);
+								printf ("<option value=\"%s\">%s</option>", $result['id'], $result['timeofeat']);
 							}
 							while ($result=mysqli_fetch_array($myrow));
 							?>

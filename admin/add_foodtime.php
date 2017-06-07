@@ -11,7 +11,7 @@ if ($time=='') {unset($time);}}
 		<body>
 <?
 		if (isset ($time)):?>
-		<?	{$myrow_time=mysqli_query($db, "INSERT INTO foodtime(time) VALUES ('$time')");
+		<?	{$myrow_time=mysqli_query($db, "INSERT INTO foodtime(timeofeat) VALUES ('$time')");
 		if (isset ($myrow_time)) {
 			echo "<p>Время приема пищи <b>$time</b> добавлено в базу!<a href='add_foodtime.php'>Добавить еще одну позицию</a></p>";
 		}
