@@ -66,9 +66,10 @@ include("blocks/db.php");?>
 
 		  </form> 
 		  <a href="admin/add_dish.php" style="display: block; text-decoration: none; font-weight: bold;">Добавить новое блюдо в базу</a>
-		  <a href="admin/add_foodtime.php" style="display: block; text-decoration: none;font-weight: bold;">Добавить время приема пищи</a>
+		  <a href="admin/add_foodtime.php" style="display: block; text-decoration: none;font-weight: bold;">Добавить категорию блюд</a>
 		  <a href="admin/all_dish.php" style="display: block; text-decoration: none;font-weight: bold;">Посмотреть/отредактировать блюда</a>
 		  <a href="admin/del_dish.php" style="display: block; text-decoration: none;font-weight: bold;">Удалить блюдо из списка</a>
+		  <a href="admin/category.php" style="display: block; text-decoration: none;font-weight: bold;">Сортировка блюд по категориям</a>
 
 
 </body>

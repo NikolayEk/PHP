@@ -41,7 +41,7 @@ if ($foodtime=='') {unset($foodtime);}}
 						<input type="text" name="weight" id="weight" placeholder="Вес блюда">
 						<label style="display: block;" for="price">Цена руб.</label>
 						<input type="text" name="price" id="price" placeholder="Цена блюда">
-						<label style="display: block;" for="foodtime">Время приема пищи</label>
+						<label style="display: block;" for="foodtime">Категория блюда</label>
 						<select name="foodtime" id="foodtime" style="margin: 20px 20px 20px 0px;">
 
 							<?

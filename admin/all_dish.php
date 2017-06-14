@@ -50,67 +50,7 @@ if (isset($_GET['id'])); {$id=($_GET['id']);}
 							?>
 		<?endif?>
 
-
-<!--вывод юлюд по времени приема пищи-->
-		<table style='background: #f069d5; float: left; width: 660px; padding: 10px;'>
-
-			<tr>
-				<td>
-					<h2>Блюда на завтрак</h2>
-				</td>
-				<td>
-					<h2>Блюда на обед</h2>
-				</td>
-				<td>
-					<h2>Блюда на ужин</h2>
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					<?
-					$bfast=mysqli_query($db, "SELECT * FROM dishs WHERE time_id=1");
-					$result=mysqli_fetch_array($bfast);
-					do {
-						printf ("<p>%s</p>", $result['food']);
-						}
-					while ($result=mysqli_fetch_array($bfast));
-					?>
-				</td>
-				<td>
-					<?
-					$lunch=mysqli_query($db, "SELECT * FROM dishs WHERE time_id=2");
-					$result=mysqli_fetch_array($lunch);
-					do {
-						printf ("<p>%s</p>", $result['food']);
-						}
-					while ($result=mysqli_fetch_array($lunch));
-					?>
-				</td>
-				<td>
-					<?
-					$dinner=mysqli_query($db, "SELECT * FROM dishs WHERE time_id=3");
-					$result=mysqli_fetch_array($dinner);
-					do {
-						printf ("<p>%s</p>", $result['food']);
-						}
-					while ($result=mysqli_fetch_array($dinner));
-					?>
-				</td>
-			</tr>
-		</table>
-
-		<?
-		$qwert=mysqli_query($db, "SELECT price FROM dishs WHERE");
-		$result=mysqli_fetch_array($qwert);
-		echo "Сумма всех блюд =".array_sum($result)." руб. <br>";
-		?>
-
-		<?
-		$qwert=mysqli_query($db, "SELECT price FROM dishs");
-		$result=mysqli_fetch_array($qwert);
-		echo "Всего блюд ".count($result);
-		?>
+		<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться к заказу блюд</a>
 
 		</body>
 	</html>

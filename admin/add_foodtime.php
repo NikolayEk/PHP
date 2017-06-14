@@ -23,8 +23,8 @@ if ($time=='') {unset($time);}}
 		<?else:?>
 			<div style="background: aqua; width: 220px; padding: 20px;">
 				<form name="add_foodtime" method="post" action="add_foodtime.php">
-					<label for="time">Время приема пищи</label>
-					<input type="text" name="time" id="time" placeholder="Введите время приема пищи" style="width: 200px; margin: 10px 0;">
+					<label for="time"><b>Категория блюда</b></label>
+					<input type="text" name="time" id="time" placeholder="Введите категорию блюда" style="width: 200px; margin: 10px 0;">
 					<button type="submit">Добавить</button>
 				</form>
 			</div>
