@@ -109,6 +109,6 @@ else {$sale=0;}
 		<p>ВАША СКИДКА <?=$sale?>руб. </p>
 		<p>СУММА С УЧЕТОМ СКИДКИ <?=$summ_sale?>руб. </p>
 	</div>
-	<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться к заказу блюд</a>
+	<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться на главную</a>
 </body>
 </html>

@@ -29,6 +29,6 @@ if ($time=='') {unset($time);}}
 				</form>
 			</div>
 		<?endif?>
-		<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться к заказу блюд</a>
+		<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться на главную</a>
 		</body>
 	</html>

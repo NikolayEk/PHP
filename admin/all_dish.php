@@ -50,7 +50,7 @@ if (isset($_GET['id'])); {$id=($_GET['id']);}
 							?>
 		<?endif?>
 
-		<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться к заказу блюд</a>
+		<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться на главную</a>
 
 		</body>
 	</html>

@@ -48,9 +48,8 @@ if (isset($_GET['id'])); {$id=($_GET['id']);}
 						$soup=mysqli_query($db, "SELECT * FROM dishs WHERE time_id=1");
 						$result=mysqli_fetch_array($soup);
 						do {
-							printf ('<input type="checkbox" name="order" value="<?$food?>">'."%s".'<br>', $result['food']);
+							printf ('<input type="checkbox" name="order[]" value="%s">%s<br>', $result['id'], $result['food']);
 							$all_dishs[]=$result['price'];
-							$order[]=$result['food'];
 							}
 						while ($result=mysqli_fetch_array($soup));
 						?>
@@ -60,7 +59,7 @@ if (isset($_GET['id'])); {$id=($_GET['id']);}
 						$salad=mysqli_query($db, "SELECT * FROM dishs WHERE time_id=2");
 						$result=mysqli_fetch_array($salad);
 						do {
-							printf ('<input type="checkbox" name="order">'."%s".'<br>', $result['food']);
+							printf ('<input type="checkbox" name="order[]" value="%s">%s<br>', $result['id'], $result['food']);
 							$all_dishs[]=$result['price'];
 							}
 						while ($result=mysqli_fetch_array($salad));
@@ -71,7 +70,7 @@ if (isset($_GET['id'])); {$id=($_GET['id']);}
 						$garnish=mysqli_query($db, "SELECT * FROM dishs WHERE time_id=3");
 						$result=mysqli_fetch_array($garnish);
 						do {
-							printf ('<input type="checkbox" name="order">'."%s".'<br>', $result['food']);
+							printf ('<input type="checkbox" name="order[]" value="%s">%s<br>', $result['id'], $result['food']);
 							$all_dishs[]=$result['price'];
 							}
 						while ($result=mysqli_fetch_array($garnish));
@@ -82,7 +81,7 @@ if (isset($_GET['id'])); {$id=($_GET['id']);}
 						$hot=mysqli_query($db, "SELECT * FROM dishs WHERE time_id=4");
 						$result=mysqli_fetch_array($hot);
 						do {
-							printf ('<input type="checkbox" name="order">'."%s".'<br>', $result['food']);
+							printf ('<input type="checkbox" name="order[]" value="%s">%s<br>', $result['id'], $result['food']);
 							$all_dishs[]=$result['price'];
 							}
 						while ($result=mysqli_fetch_array($hot));
@@ -93,7 +92,7 @@ if (isset($_GET['id'])); {$id=($_GET['id']);}
 						$dessert=mysqli_query($db, "SELECT * FROM dishs WHERE time_id=5");
 						$result=mysqli_fetch_array($dessert);
 						do {
-							printf ('<input type="checkbox" name="order">'."%s".'<br>', $result['food']);
+							printf ('<input type="checkbox" name="order[]" value="%s">%s<br>', $result['id'], $result['food']);
 							$all_dishs[]=$result['price'];
 							}
 						while ($result=mysqli_fetch_array($dessert));
@@ -104,7 +103,7 @@ if (isset($_GET['id'])); {$id=($_GET['id']);}
 						$drink=mysqli_query($db, "SELECT * FROM dishs WHERE time_id=6");
 						$result=mysqli_fetch_array($drink);
 						do {
-							printf ('<input type="checkbox" name="order">'."%s".'<br>', $result['food']);
+							printf ('<input type="checkbox" name="order[]" value="%s">%s<br>', $result['id'], $result['food']);
 							$all_dishs[]=$result['price'];
 							}
 						while ($result=mysqli_fetch_array($drink));
@@ -120,9 +119,17 @@ if (isset($_GET['id'])); {$id=($_GET['id']);}
 		echo "Сумма всех блюд =".array_sum($all_dishs)." руб. <br>";
 		echo "Всего блюд ".count($all_dishs);
 		?>
+		<br>
+
+		<?
+			$order[]=$order;
+			 foreach ($order as $key => $value) {
+    		 echo "$value<br>";
+   				 }
+		?>
 
 
-		<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться к заказу блюд</a>
+		<a href="../index.php" style="display: block; text-decoration: none; font-weight: bold;">Вернуться на главную</a>
 
 		</body>
 	</html>
