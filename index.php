@@ -71,6 +71,16 @@ include("blocks/db.php");?>
 		  <a href="admin/del_dish.php" style="display: block; text-decoration: none;font-weight: bold;">Удалить блюдо из списка</a>
 		  <a href="admin/category.php" style="display: block; text-decoration: none;font-weight: bold;">Сортировка блюд по категориям</a>
 
+<!--Date-->
+		
+		<div style="clear: both; width: 180px; height: 50px; color: white; background: black; padding: 30px; font-weight: bold; ">
+		<?
+			$months=array(1=>' Января ',' Февраля ',' Марта ',' Апреля ',' Мая ',' Июня ',' Июля ',' Августа ',' Сентября ',' Октября ',' Ноября ',' Декабря ');
+			 echo "Сегодня - ".date('d'.$months[date('n')].'Y')."<br>";
+    		 echo "Время - ".date("H:i:s");
+		?>
+		</div>
+
 
 </body>
 </html>
