@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName admin
+AuthUserFile W:/domains/menu/.htpasswd
+require valid-user
+
+AddDefaultCharset UTF-8

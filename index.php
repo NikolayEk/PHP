@@ -10,7 +10,7 @@ include("blocks/db.php");?>
 
 		<form name="eda" method="post" action="result.php">
 <!--блюдо-->
-			<div style="background: #F0F362; float: left; width: 220px; padding: 10px;">
+			<div style="background: #F0F362; float: left; width: 220px; padding: 10px; padding: 30px 20px;">
 				<h2>Выберите блюдо</h2>
 				<label style="display: block;" for="food1">Блюдо1</label>
 				<input type="text" name="dish1" id="food1">
@@ -24,7 +24,7 @@ include("blocks/db.php");?>
 				<input type="text" name="dish5" id="food5">
 			</div>
 <!--количество-->
-			<div style="background: #33bdc4; float: left; width: 220px; padding: 10px;">
+			<div style="background: #33bdc4; float: left; width: 220px; padding: 10px; padding: 30px 20px;">
 				<h2>Количество порций</h2>
 				<label style="display: block;" for="unit1">Количество</label>
 				<input type="text" name="unit1" id="unit1">
@@ -38,7 +38,7 @@ include("blocks/db.php");?>
 				<input type="text" name="unit5" id="unit5">
 			</div>
 <!--цена-->
-			<div style="background: #8DF362; float: left; width: 220px;  padding: 10px;">
+			<div style="background: #8DF362; float: left; width: 220px;  padding: 10px; padding: 30px 20px;">
 				<h2>Цена блюда</h2>
 				<label style="display: block;" for="cost1">Цена1</label>
 				<input type="text" name="price1" id="cost1">
@@ -65,11 +65,17 @@ include("blocks/db.php");?>
 
 
 		  </form> 
-		  <a href="admin/add_dish.php" style="display: block; text-decoration: none; font-weight: bold;">Добавить новое блюдо в базу</a>
+		  <a href="admin/addwithphoto_dish.php" style="display: block; text-decoration: none; font-weight: bold;">Добавить новое блюдо в базу</a>
 		  <a href="admin/add_foodtime.php" style="display: block; text-decoration: none;font-weight: bold;">Добавить категорию блюд</a>
-		  <a href="admin/all_dish.php" style="display: block; text-decoration: none;font-weight: bold;">Посмотреть/отредактировать блюда</a>
+		  <a href="admin/add_waiter.php" style="display: block; text-decoration: none;font-weight: bold;">Добавить официанта</a>
+		  <a href="admin/editwithphoto_dish.php" style="display: block; text-decoration: none;font-weight: bold;">Редактировать меню</a>
 		  <a href="admin/del_dish.php" style="display: block; text-decoration: none;font-weight: bold;">Удалить блюдо из списка</a>
 		  <a href="admin/category.php" style="display: block; text-decoration: none;font-weight: bold;">Сортировка блюд по категориям</a>
+		  <a href="admin/allwithphoto_dish.php" style="display: block; text-decoration: none;font-weight: bold;">Посмотреть меню</a>
+		  <a href="admin/made_order.php" style="display: block; text-decoration: none;font-weight: bold;">Сделать заказ</a>
+		  <a href="admin/all_order.php" style="display: block; text-decoration: none;font-weight: bold;">Посмотреть заказы</a>
+		  <a href="admin/mail.php" style="display: block; text-decoration: none;font-weight: bold;">Отправить сообщение</a>
+		  <a href="menupagination.php" style="display: block; text-decoration: none;font-weight: bold;">Эксперименты с пагинацией</a>
 
 <!--Date-->
 		
